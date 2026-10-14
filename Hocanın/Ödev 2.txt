@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Kişisel Web Sayfam</h4>
+  <p>Merhaba!Ben kayra Özdemir. Bu Sayfada Kendimi Tanıtmak İçin Hazırlanmıştır</p>
+  <hr>
+  <h2>Hakkımda</h2>
+  <p>Ben Kayra Özdemir.<b>Bilgisayar Teknolojileri</b> ile İlgileniyorum ve web rasarım ögreniyorum.</p>
+  
+  <p> Boş zamanlarımda<i>kitap okumayı,müzik dinlemeyi</i> ve <u>yeni bilgiler öğrenmeyi seviyorum</u></p>
+  
+<p> Benimiçin <mark>programlama öğrenmek</mark> oldukça önemlidir
+<hr>
+<h2>Hobilerim</h2>
+<li>Boş zamanlarımda yapmayı sevdigim şeyler
+<ul>
+<li>kitap okumak</li>
+<li>Filim izlemek</li>
+<li>Spor yapmak</li>
+<hr>
+</ul>
+<h2> Günlük rutinim </h2>
+<li>Gün icinde yaptıgım şeyler
+<ol>
+<li>Sabah erken kalkarım</li>
+<li>Derslerime Calışırım</li>
+<li>Bilgisayar başında pratik yaparım</li>
+<li>Kitap okurum</li>
+</ol>
+<hr>
+<h2>Yeteneklerim<h2>
+<h4>Bilgisayar bilgim</h4>
+<p>Bilgisayar kullanmayı seviyorum.Dosya oluşturma,dosya kullanımı ve temel bilgisayar işlemleri konusuda bilgilerim var.
+<h4>Programlama bilgileri</h4>
+<p> Şu anda <b>HTML5</b> öğreniyorum.HTML etikletlerini kullanarak <b>web sayfaları</b> oluşturabiliyorum
+<hr>
+<h2>Gelecek Hedeflerim</h2>
+<p>gelecekte <b>web tasarım</b> ve <b>programlama</b>alanında kendimi geliştirmek istiyorum.</p>
+<p>Özellikle <mark>HTML,CSS ve JavaScript</mark> öğrerek kendi web sayfamıoluşturmayı hedefliyorum.</p>
+<hr>
+<h2>Metin Bicimlendirme Örneği</h2>
+<p><b>Kalın ve Önemli metin</b></p>
+<p><b>Kalın metin</b></p>
+<p><small><i>Vurgulu Metin</i></small></p>
+<p><i>İtalik Metin</i></p>
+<p><u>Altı Cizili metin</u></p>
+<p><mark>İşaretli metin</mark></p>
+<p><small>Kücük metin</small></p>
+<hr>
+<p>2026 Kayra Özdemir-Tüm haklar saklıdır.</p>
+<p>İletişim:<b>Kayraozdemir078@gmail.com</b></p>
+
+
+
+
+</body>
+</html>
+
+
