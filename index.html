@@ -1,18 +1,632 @@
+
 <!DOCTYPE html>
-<html>
-    <body>
-        <a href="tablolar/dersProgram.html">uygulama1</a>
-        <hr>
-        <a href="ol_ul/ol.html">ol uygulamaları </a>
-        <hr>
-        <a href="ol_ul/ul.html">ul uygulamaları </a>
-        <hr>
-        <a href="odev_hoca/Ödev 2.html">odev uygulama 2</a>
-        <hr>
-        <a href="odev_hoca/Başlıklar.html">h1_h6 uygulama 3</a>
-        <hr>
-        <a href="odev_hoca/html5.html">html5 uygulama 4</a>
-        <hr>
-        <a href="tablolar/yeniodev.html">odev uygulama 5</a>
-    </body>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HTML dersleri, tablolar, listeler ve web tasarım örnekleri.">
+<meta name="theme-color" content="#0b1020">
+<title>Web Atölyem | HTML Uygulamaları</title>
+
+<style>
+:root {
+    --bg: #0b1020;
+    --panel: #121a30;
+    --text: #f4f7ff;
+    --muted: #a7b3cc;
+    --accent: #7c9cff;
+    --green: #61e6c4;
+    --line: rgba(255,255,255,.1);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(ellipse at 12% 0%, rgba(83,109,255,.18), transparent 36%),
+        radial-gradient(ellipse at 92% 12%, rgba(50,221,185,.10), transparent 30%),
+        var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+    width: min(1180px, calc(100% - 40px));
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--accent), #a98bff);
+    color: #081020;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.nav-label {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.hero {
+    padding: 70px 0 42px;
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 14px var(--green);
+}
+
+h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin: 17px 0 20px;
+}
+
+h1 span {
+    background: linear-gradient(100deg, #9db5ff, var(--green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.intro {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 630px;
+}
+
+.hero-art {
+    min-height: 250px;
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    background: linear-gradient(145deg, rgba(124,156,255,.14), rgba(97,230,196,.06));
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-art::before,
+.hero-art::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+    width: 230px;
+    height: 230px;
+}
+
+.hero-art::after {
+    width: 160px;
+    height: 160px;
+}
+
+.code-symbol {
+    font-size: 75px;
+    font-weight: 900;
+    letter-spacing: -8px;
+    color: #dfe7ff;
+    text-shadow: 0 0 45px rgba(124,156,255,.7);
+    z-index: 1;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.float {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    background: #10182b;
+    border-radius: 10px;
+    color: #cbd6f0;
+    z-index: 2;
+}
+
+.f1 { top: 22px; left: 20px; }
+.f2 { right: 18px; top: 55px; color: var(--green); }
+.f3 { bottom: 22px; left: 28px; }
+
+.stats {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.stat {
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.035);
+    border-radius: 12px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.stat strong {
+    color: var(--text);
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.section-head h2 {
+    font-size: 27px;
+    margin: 0;
+}
+
+.section-head p {
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.search {
+    width: min(330px, 100%);
+    position: relative;
+}
+
+.search input {
+    width: 100%;
+    padding: 13px 15px 13px 42px;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    background: #10182b;
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+}
+
+.search input:focus { border-color: var(--accent); }
+
+.search span {
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    color: var(--muted);
+    font-size: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    padding-bottom: 70px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-height: 245px;
+    padding: 22px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: linear-gradient(145deg, #17223d, #11192d);
+    transition: transform .25s, border-color .25s, box-shadow .25s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(124,156,255,.7);
+    box-shadow: 0 14px 35px rgba(0,0,0,.2);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.number {
+    font-size: 12px;
+    color: #8b9dc5;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tag {
+    font-size: 10px;
+    color: #aebeff;
+    background: rgba(124,156,255,.12);
+    border: 1px solid rgba(124,156,255,.16);
+    border-radius: 20px;
+    padding: 5px 9px;
+}
+
+.mini-icon {
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 13px;
+    background: rgba(97,230,196,.1);
+    border: 1px solid rgba(97,230,196,.18);
+    color: var(--green);
+    font-size: 15px;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 14px 0 5px;
+}
+
+.card p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 18px;
+}
+
+.open {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 13px;
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+    font-weight: 800;
+    color: #d8e1ff;
+}
+
+.open span {
+    font-size: 19px;
+    color: var(--green);
+}
+
+.empty {
+    display: none;
+    padding: 40px;
+    text-align: center;
+    color: var(--muted);
+    grid-column: 1 / -1;
+    border: 1px dashed var(--line);
+    border-radius: 18px;
+}
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 24px 0 34px;
+    color: var(--muted);
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-mark { color: var(--green); }
+
+@media (max-width: 850px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 50px;
+    }
+
+    .hero-art { min-height: 190px; }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .search { width: 100%; }
+}
+
+@media (max-width: 560px) {
+    .wrap { width: calc(100% - 28px); }
+    nav { padding: 17px 0; }
+    .nav-label { display: none; }
+    .hero { padding: 42px 0 28px; }
+    h1 { letter-spacing: -1px; }
+    .intro { font-size: 15px; }
+    .grid { grid-template-columns: 1fr; gap: 15px; }
+    .card { min-height: 220px; }
+    .hero-art { min-height: 160px; }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<nav>
+    <a class="brand" href="index.html">
+        <span class="logo">&lt;/&gt;</span>
+        <span>WEB ATÖLYEM</span>
+    </a>
+    <span class="nav-label">HTML • TASARIM • UYGULAMALAR</span>
+</nav>
+
+<header class="hero">
+    <div>
+        <div class="eyebrow"><span class="dot"></span> Kişisel kod arşivim</div>
+
+        <h1>Fikirlerimi <span>web'e</span> dönüştürüyorum.</h1>
+
+        <p class="intro">
+            HTML öğrenirken hazırladığım uygulamalar, tablo örnekleri,
+            listeler ve sayfa taslakları. İstediğin çalışmayı seç,
+            tek tıkla aç ve keşfet.
+        </p>
+
+        <div class="stats">
+            <div class="stat"><strong>18</strong> HTML çalışması</div>
+            <div class="stat"><strong>5</strong> kategori</div>
+            <div class="stat"><strong>01</strong> tıkla keşfet</div>
+        </div>
+    </div>
+
+    <div class="hero-art">
+        <span class="float f1">HTML5</span>
+        <span class="float f2">CREATIVE</span>
+        <span class="float f3">WEB PROJECTS</span>
+        <div class="code-symbol">&lt;/&gt;</div>
+    </div>
+</header>
+
+<section>
+    <div class="section-head">
+        <div>
+            <h2>Uygulama koleksiyonu</h2>
+            <p>Bir uygulama seçerek çalışmayı açabilirsin.</p>
+        </div>
+
+        <label class="search">
+            <span>⌕</span>
+            <input id="searchInput" type="search"
+                   placeholder="Uygulama ara..."
+                   aria-label="Uygulamalarda ara">
+        </label>
+    </div>
+
+    <div class="grid" id="appGrid">
+
+        <a class="card" href="uygulama10_odev.html" data-search="anlamsal html sayfası">
+            <div class="card-top"><span class="number">01</span><span class="tag">Genel</span></div>
+            <div class="mini-icon">&lt;/&gt;</div>
+            <h3>Anlamsal HTML Sayfası</h3>
+            <p>HTML5 etiketleriyle sayfa çalışması.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="Resim_ekleme/html5_sablon.html" data-search="article görseller html5 şablon">
+            <div class="card-top"><span class="number">02</span><span class="tag">Görseller</span></div>
+            <div class="mini-icon">IMG</div>
+            <h3>Article Kullanımı</h3>
+            <p>Görsel ve HTML5 şablon çalışması.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="tablolar/tablo_1.html" data-search="tablo örneği tablolar">
+            <div class="card-top"><span class="number">03</span><span class="tag">Tablolar</span></div>
+            <div class="mini-icon">▦</div>
+            <h3>Tablo Örneği</h3>
+            <p>Tablo yapıları ve örnek sayfalar.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="tablolar/Anasayfa.html" data-search="tablolar ana sayfa">
+            <div class="card-top"><span class="number">04</span><span class="tag">Tablolar</span></div>
+            <div class="mini-icon">▤</div>
+            <h3>Tablolar – Ana Sayfa</h3>
+            <p>Tablo çalışmalarına giriş sayfası.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar/uygulama10_html5_sablonu.html" data-search="div web sayfası şablonu html5">
+            <div class="card-top"><span class="number">05</span><span class="tag">HTML</span></div>
+            <div class="mini-icon">DIV</div>
+            <h3>Div ile Web Sayfası Şablonu</h3>
+            <p>HTML5, div ve span uygulamaları.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar/uygulama7_div_span.html" data-search="div span yerleşimi">
+            <div class="card-top"><span class="number">06</span><span class="tag">HTML</span></div>
+            <div class="mini-icon">DIV</div>
+            <h3>Div ve Span Yerleşimi</h3>
+            <p>Sayfa bölümlerini düzenleme çalışması.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar/uygulama6.html" data-search="github deneme sayfası">
+            <div class="card-top"><span class="number">07</span><span class="tag">HTML</span></div>
+            <div class="mini-icon">&lt;/&gt;</div>
+            <h3>GitHub Deneme Sayfası</h3>
+            <p>HTML denemeleri için çalışma alanı.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar/html5.html" data-search="html5 öğreniyorum">
+            <div class="card-top"><span class="number">08</span><span class="tag">HTML</span></div>
+            <div class="mini-icon">H5</div>
+            <h3>HTML5 Öğreniyorum</h3>
+            <p>HTML5 etiketlerini öğrenme çalışması.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar_tam_liste/uygulama10_odev.html" data-search="anlamsal html tam uygulama listesi">
+            <div class="card-top"><span class="number">09</span><span class="tag">Dersler</span></div>
+            <div class="mini-icon">&lt;/&gt;</div>
+            <h3>Anlamsal HTML Sayfası</h3>
+            <p>HTML ders uygulamalarının tam listesinden.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar_tam_liste/dersProgram.html" data-search="ders programı">
+            <div class="card-top"><span class="number">10</span><span class="tag">Dersler</span></div>
+            <div class="mini-icon">▦</div>
+            <h3>Ders Programı</h3>
+            <p>Ders programı sayfası.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar_tam_liste/tablolar2.html" data-search="ders programı tablo">
+            <div class="card-top"><span class="number">11</span><span class="tag">Dersler</span></div>
+            <div class="mini-icon">▤</div>
+            <h3>Ders Programı – Tablo</h3>
+            <p>Tablolarla hazırlanmış ders çalışması.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar_tam_liste/uygulama7_div_span.html" data-search="div span yerleşimi">
+            <div class="card-top"><span class="number">12</span><span class="tag">Dersler</span></div>
+            <div class="mini-icon">DIV</div>
+            <h3>Div ve Span Yerleşimi</h3>
+            <p>HTML sayfa yerleşimi uygulaması.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar_tam_liste/uygulama8_div_sablonu copy.html" data-search="div web sayfası şablonu">
+            <div class="card-top"><span class="number">13</span><span class="tag">Dersler</span></div>
+            <div class="mini-icon">DIV</div>
+            <h3>Div Web Sayfası Şablonu</h3>
+            <p>Sayfa düzeni oluşturma çalışması.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar_tam_liste/uygulama6.html" data-search="github deneme sayfası">
+            <div class="card-top"><span class="number">14</span><span class="tag">Dersler</span></div>
+            <div class="mini-icon">&lt;/&gt;</div>
+            <h3>GitHub Deneme Sayfası</h3>
+            <p>Deneme ve öğrenme sayfası.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar_tam_liste/Başlıklar.html" data-search="html başlıkları">
+            <div class="card-top"><span class="number">15</span><span class="tag">Dersler</span></div>
+            <div class="mini-icon">H1</div>
+            <h3>HTML Başlıkları</h3>
+            <p>Başlık etiketleriyle ilgili çalışma.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar_tam_liste/ol.html" data-search="sıralı listeler ol">
+            <div class="card-top"><span class="number">16</span><span class="tag">Listeler</span></div>
+            <div class="mini-icon">1.</div>
+            <h3>Sıralı Listeler (OL)</h3>
+            <p>Numaralı HTML listeleri.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar_tam_liste/ul.html" data-search="sırasız listeler ul">
+            <div class="card-top"><span class="number">17</span><span class="tag">Listeler</span></div>
+            <div class="mini-icon">•</div>
+            <h3>Sırasız Listeler (UL)</h3>
+            <p>Madde işaretli HTML listeleri.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <a class="card" href="uygulamalar_tam_liste/yeniodev.html" data-search="yeni ödev">
+            <div class="card-top"><span class="number">18</span><span class="tag">Ödevler</span></div>
+            <div class="mini-icon">✦</div>
+            <h3>Yeni Ödev</h3>
+            <p>Yeni HTML ödevi ve uygulama sayfası.</p>
+            <div class="open">Uygulamayı aç <span>↗</span></div>
+        </a>
+
+        <div class="empty" id="emptyState">
+            Aramana uygun uygulama bulunamadı. Başka bir kelime dene.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <span>© 2026 <span class="footer-mark">WEB ATÖLYEM</span> · Öğrenerek, deneyerek, geliştirerek.</span>
+    <span>HTML ile hazırlandı ✦</span>
+</footer>
+
+</div>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = [...document.querySelectorAll(".card")];
+const emptyState = document.getElementById("emptyState");
+
+searchInput.addEventListener("input", function () {
+    const query = searchInput.value.toLocaleLowerCase("tr-TR").trim();
+    let visible = 0;
+
+    cards.forEach(function (card) {
+        const words = card.dataset.search.toLocaleLowerCase("tr-TR");
+        const title = card.querySelector("h3").textContent.toLocaleLowerCase("tr-TR");
+        const match = words.includes(query) || title.includes(query);
+
+        card.style.display = match ? "flex" : "none";
+
+        if (match) visible++;
+    });
+
+    emptyState.style.display = visible ? "none" : "block";
+});
+</script>
+
+</body>
 </html>
