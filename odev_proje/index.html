@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Web Projesi</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 1000px;
+            height: 100px;
+            border: 1px dotted darkblue;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            margin: 10px auto;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+
+        header h1 {
+            margin: 5px;
+            font-size: 28px;
+        }
+
+        header h6 {
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        nav {
+            width: 1000px;
+            height: 60px;
+            border: 1px dotted rgb(68, 68, 216);
+            background-color: rgb(21, 96, 131);
+            text-align: center;
+            line-height: 60px;
+            margin: 5px auto;
+            box-sizing: border-box;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+        }
+
+        section {
+            width: 1000px;
+            height: 60px;
+            border: 1px dotted darkblue;
+            background-color: #1e285f;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+            margin: 10px auto;
+            box-sizing: border-box;
+        }
+
+        section h3 {
+            margin: 0;
+        }
+
+        .icerik {
+            width: 1000px;
+        }
+
+        footer {
+            width: 1000px;
+            min-height: 130px;
+            border: 1px dotted darkblue;
+            background-color: #8f89e2;
+            text-align: center;
+            margin: 10px auto;
+            padding: 5px;
+            
+        }
+
+        footer h3 {
+            margin: 5px;
+        }
+
+        footer ul {
+            display: inline-block;
+            text-align: left;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>HTML5 Web Projesi</h1>
+        <h6>Proje Raporu</h6>
+    </header>
+
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="iletişim.html">İletişim</a>
+        <a href="ekip.html">Proje Ekibi</a>
+    </nav>
+
+    <section>
+        <h3>1. Proje Hakkında</h3>
+    </section>
+
+    <div class="icerik">
+        Bu proje, HTML5 kullanılarak geliştirilmiş basit bir web sitesi
+        şablonudur. Site 3 sayfadan oluşmaktadır.
+
+        <ul type="disc">
+            <li>Anasayfa (index.html)</li>
+            <li>Proje Ekibi (ekip.html)</li>
+            <li>İletişim Formu (iletişim.html)</li>
+        </ul>
+
+        Tüm sayfalarda ortak bir yapı kullanılmıştır.
+
+        <ul type="disc">
+            <li>Üstte header (logo ve başlık)</li>
+            <li>Altında nav (3 bağlantı)</li>
+            <li>Ortada section (içerik)</li>
+            <li>Sağda aside (görsel/tanıtım)</li>
+            <li>En altta footer (iletişim bilgileri vb.)</li>
+        </ul>
+    </div>
+
+    <footer>
+        <h3>Kullanılan Teknolojiler</h3>
+        <ul type="disc">
+            <li>HTML5</li>
+            <li>CSS3 (stil için)</li>
+        </ul>
+    </footer>
+
+</body>
+</html>
