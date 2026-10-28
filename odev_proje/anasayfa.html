@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 10px;
+        }
+
+        header {
+            width: 1000px;
+            height: 100px;
+            border: 1px dotted darkblue;
+            background-color: darkblue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 10px auto;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+
+        header img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            position: absolute;
+            left: 15px;
+        }
+
+        header h1 {
+            margin: 5px;
+            font-size: 28px;
+        }
+
+        nav {
+            width: 1000px;
+            height: 60px;
+            border: 1px dotted rgb(68, 68, 216);
+            background-color: rgb(21, 96, 131);
+            text-align: center;
+            line-height: 60px;
+            margin: 5px auto;
+            box-sizing: border-box;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+        }
+
+        section {
+            width: 1000px;
+            min-height: 300px;
+            border: 1px dotted darkblue;
+            background-color: #1e285f;
+            color: white;
+            display: flex;
+            align-items: center;
+            
+            margin: 10px auto;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .section-yazi {
+            flex: 1;
+        }
+
+        .robot-gorsel {
+            width: 250px;
+            text-align: center;
+        }
+
+        .robot-gorsel img {
+            width: 230px;
+            height: 230px;
+            object-fit: contain;
+        }
+
+        .robot-gorsel p {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        section h3 {
+            margin: 5px 0 10px;
+            font-size: 18px;
+        }
+
+        section h4 {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        section ul {
+            padding-left: 25px;
+        }
+
+        footer {
+            width: 1000px;
+            min-height: 130px;
+            border: 1px dotted darkblue;
+            background-color: #8f89e2;
+            text-align: center;
+            margin: 10px auto;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="robot.jpg" alt="Robot resmi">
+        <h1>MTAL Robotik Projesi</h1>
+    </header>
+
+    <nav>
+        <a href="anasayfa.html">Ana Sayfa</a>
+        <a href="iletişim.html">İletişim</a>
+        <a href="ekip.html">Proje Ekibi</a>
+    </nav>
+
+    <section>
+
+        <div class="section-yazi">
+            <h3>Akıllı Robot Projesi</h3>
+
+            Bu proje, öğrencilerimizin teknolojiye olan ilgilerini
+            arttırmak ve robotik alanında uygulamalı öğrenme
+            sunmak amacıyla geliştirilmiştir.
+
+            <h4>Hedeflerimiz</h4>
+
+            <ul type="disc">
+                <li>Robotik ve kodlama becerileri geliştirmek</li>
+                <li>Yaratıcı ve yenilikçi çözümler üretmek</li>
+                <li>Geleceğin teknolojilerine hazırlıklı olmak</li>
+            </ul>
+        </div>
+
+        <div class="robot-gorsel">
+            <img src="cizgiizleyen.jpg" alt="Çizgi izleyen robot">
+
+            <p>
+                <strong>Robotik Projemiz</strong><br>
+                Küçük adımlar, büyük hedefler...
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+        📍 Karabük MTAL | 📞 05409062009 |
+        ✉ kayraozdemir078@gmail.com
+        <br>
+        2005 Tüm Hakları Saklıdır
+    </footer>
+
+</body>
+</html>
