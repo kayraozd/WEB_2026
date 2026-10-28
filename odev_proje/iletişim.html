@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 10px;
+        }
+
+        header {
+            width: 1000px;
+            height: 100px;
+            border: 1px dotted darkblue;
+            background-color: darkblue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 10px auto;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+
+        header img {
+            width: 65px;
+            height: 65px;
+            left: 50px;
+        }
+
+        header h1 {
+            margin: 5px;
+            font-size: 28px;
+        }
+
+        nav {
+            width: 1000px;
+            height: 60px;
+            border: 1px dotted rgb(68, 68, 216);
+            background-color: rgb(21, 96, 131);
+            text-align: center;
+            line-height: 60px;
+            margin: 5px auto;
+            box-sizing: border-box;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+        }
+
+        section {
+            width: 1000px;
+            min-height: 300px;
+            border: 1px dotted darkblue;
+            background-color: #1e285f;
+            color: white;
+            display: flex;
+            align-items: center;
+            margin: 10px auto;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+</style>
+    </head>
+    <body>
+        <header>
+        <img src="robot.jpg" alt="Robot resmi">
+        <h1>MTAL Robotik Projesi</h1>
+    </header>
+     <nav>
+        <a href="anasayfa.html">Ana Sayfa</a>
+        <a href="iletişim.html">İletişim</a>
+        <a href="ekip.html">Proje Ekibi</a>
+    </nav>
+    <h2>iletişim Formu</h2>
+    bizimle iletişime geçmek için aşagıdaki formu doldurabilirsiniz
+    <form>
+<fieldset>
+<label>Ad Soyad : </label> 
+<input type="text" name="adSoyad" required="required"> <br/><br/>
+<label>e-Posta : </label> 
+<input type="email"  name="ePosta" required="required"> <br/><br/>
+<label>Yorum:</label> 
+<textarea rows="3" cols="20" tabindex="2"></textarea> <br/><br/>
+
+<select name="iller" id="iller" size="1">
+    <option value="plaka01">Adana</option>
+    <option value="plaka02">Adıyaman</option>
+    <option value="plaka03">Afyonkarahisar</option>
+    <option value="plaka04">Ağrı</option>
+    <option value="plaka05">Amasya</option>
+    <option value="plaka06">Ankara</option>
+    <option value="plaka07">Antalya</option>
+    <option value="plaka08">Artvin</option>
+    <option value="plaka09">Aydın</option>
+    <option value="plaka10">Balıkesir</option>
+    <option value="plaka11">Bilecik</option>
+    <option value="plaka12">Bingöl</option>
+    <option value="plaka13">Bitlis</option>
+    <option value="plaka14">Bolu</option>
+    <option value="plaka15">Burdur</option>
+    <option value="plaka16">Bursa</option>
+    <option value="plaka17">Çanakkale</option>
+    <option value="plaka18">Çankırı</option>
+    <option value="plaka19">Çorum</option>
+    <option value="plaka20">Denizli</option>
+    <option value="plaka21">Diyarbakır</option>
+    <option value="plaka22">Edirne</option>
+    <option value="plaka23">Elazığ</option>
+    <option value="plaka24">Erzincan</option>
+    <option value="plaka25">Erzurum</option>
+    <option value="plaka26">Eskişehir</option>
+    <option value="plaka27">Gaziantep</option>
+    <option value="plaka28">Giresun</option>
+    <option value="plaka29">Gümüşhane</option>
+    <option value="plaka30">Hakkari</option>
+    <option value="plaka31">Hatay</option>
+    <option value="plaka32">Isparta</option>
+    <option value="plaka33">Mersin</option>
+    <option value="plaka34">İstanbul</option>
+    <option value="plaka35">İzmir</option>
+    <option value="plaka36">Kars</option>
+    <option value="plaka37">Kastamonu</option>
+    <option value="plaka38">Kayseri</option>
+    <option value="plaka39">Kırklareli</option>
+    <option value="plaka40">Kırşehir</option>
+    <option value="plaka41">Kocaeli</option>
+    <option value="plaka42">Konya</option>
+    <option value="plaka43">Kütahya</option>
+    <option value="plaka44">Malatya</option>
+    <option value="plaka45">Manisa</option>
+    <option value="plaka46">Kahramanmaraş</option>
+    <option value="plaka47">Mardin</option>
+    <option value="plaka48">Muğla</option>
+    <option value="plaka49">Muş</option>
+    <option value="plaka50">Nevşehir</option>
+    <option value="plaka51">Niğde</option>
+    <option value="plaka52">Ordu</option>
+    <option value="plaka53">Rize</option>
+    <option value="plaka54">Sakarya</option>
+    <option value="plaka55">Samsun</option>
+    <option value="plaka56">Siirt</option>
+    <option value="plaka57">Sinop</option>
+    <option value="plaka58">Sivas</option>
+    <option value="plaka59">Tekirdağ</option>
+    <option value="plaka60">Tokat</option>
+    <option value="plaka61">Trabzon</option>
+    <option value="plaka62">Tunceli</option>
+    <option value="plaka63">Şanlıurfa</option>
+    <option value="plaka64">Uşak</option>
+    <option value="plaka65">Van</option>
+    <option value="plaka66">Yozgat</option>
+    <option value="plaka67">Zonguldak</option>
+    <option value="plaka68">Aksaray</option>
+    <option value="plaka69">Bayburt</option>
+    <option value="plaka70">Karaman</option>
+    <option value="plaka71">Kırıkkale</option>
+    <option value="plaka72">Batman</option>
+    <option value="plaka73">Şırnak</option>
+    <option value="plaka74">Bartın</option>
+    <option value="plaka75">Ardahan</option>
+    <option value="plaka76">Iğdır</option>
+    <option value="plaka77">Yalova</option>
+    <option value="plaka78">Karabük</option>
+    <option value="plaka79">Kilis</option>
+    <option value="plaka80">Osmaniye</option>
+    <option value="plaka81">Düzce</option>
+</select>
+
+<input type="submit" value="Gönder"/>
+<input type="reset" value="Temizle"/>
+</fieldset>
+</form>
+<form>
+    <fieldset>
+        <h3>İlgi Alanınız</h3>
+        <input type="checkbox" name="kutu1" checked="on"/>Robotik<br/>
+        <input type="checkbox" name="kutu2"/>Yazılım<br/>
+        <input type="checkbox" name="kutu3"/>Donanım<br>
+        <input type="checkbox" name="kutu3"/>Web Tasarım<br>
+
+        <h3>Cinsiyetiniz</h3>
+       
+        <input type="radio" name="cinsiyet" value="erkek" checked> Erkek<br>
+        <input type="radio" name="cinsiyet" value="kadin"> Kadın<br>
+        <input type="radio" name="cinsiyet" value="diger"> Diğer<br>
+        <h3><hr></h3>
+       
+     <input type="radio" name="kabul" value="veri" checked-off> verilerimin saklanmasına izin veriyorum
+        <input type="submit" value="Gönder">
+    </fieldset>
+
+</form>
+    </body>
+</html>
