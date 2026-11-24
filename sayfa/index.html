@@ -10,7 +10,27 @@
 
     <h1>CSS Özellikleri</h1>
 
-    <img src="resim.png" alt="Baykuş resmi">
+   
+    <div class="baykus">
+
+        <div class="kulak sol"></div>
+        <div class="kulak sag"></div>
+
+        <div class="gozler">
+            <div class="goz">
+                <div class="goz-bebegi"></div>
+            </div>
+
+            <div class="goz">
+                <div class="goz-bebegi"></div>
+            </div>
+        </div>
+
+        <div class="gaga"></div>
+
+    </div>
+
+  
 
     <p id="font-size">Bu yazının boyutu değiştirildi.</p>
 
@@ -51,9 +71,34 @@
         Bu yazı belirli bir alana sığmadığında üç nokta ile gösterilecektir.
     </p>
 
-    <div>
+    <div class="kutu">
         <i><a>Bilişim Teknolojileri</a></i>
     </div>
+
+    <script>
+        document.addEventListener("mousemove", function(e) {
+
+            document.querySelectorAll(".goz").forEach(function(goz) {
+
+                let rect = goz.getBoundingClientRect();
+
+                let x = e.clientX - (rect.left + rect.width / 2);
+                let y = e.clientY - (rect.top + rect.height / 2);
+
+                let aci = Math.atan2(y, x);
+
+                let mesafe = 18;
+
+                let gozX = Math.cos(aci) * mesafe;
+                let gozY = Math.sin(aci) * mesafe;
+
+                goz.querySelector(".goz-bebegi").style.transform =
+                    `translate(${gozX}px, ${gozY}px)`;
+
+            });
+
+        });
+    </script>
 
 </body>
 </html>
