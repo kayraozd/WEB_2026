@@ -1,0 +1,17 @@
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+#başlık {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+}
+
+#selam {
+    background-color: yellow;
+    color: black;
+    font-size: 25px;
+}
