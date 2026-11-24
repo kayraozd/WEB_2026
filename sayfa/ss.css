@@ -4,14 +4,66 @@ img {
     height: 200px;
 }
 
-#başlık {
-    background-color: red;
-    color: white;
-    font-size: 20px;
+#font-size {
+    font-size: 16px;
 }
 
-#selam {
-    background-color: yellow;
-    color: black;
-    font-size: 25px;
+#font-style {
+    font-style: italic;
+}
+
+#font-weight {
+    font-weight: bold;
+}
+
+#font-family {
+    font-family: Verdana;
+}
+
+#color {
+    color: blue;
+}
+
+#letter-spacing {
+    letter-spacing: 0.5em;
+}
+
+#word-spacing {
+    word-spacing: 0.5em;
+}
+
+#word-wrap {
+    width: 200px;
+    word-wrap: break-word;
+}
+
+#line-height {
+    line-height: 12px;
+}
+
+#text-transform {
+    text-transform: uppercase;
+}
+
+#text-decoration {
+    text-decoration: underline;
+}
+
+#text-align {
+    text-align: center;
+}
+
+#text-indent {
+    text-indent: 10px;
+}
+
+#text-shadow {
+    text-shadow: 2px 2px gray;
+}
+
+#text-overflow {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
