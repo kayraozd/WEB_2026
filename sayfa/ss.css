@@ -165,3 +165,6 @@ html{
        background-attachment:fixed;
 
 }
+a{
+    float:inline-end;
+}
